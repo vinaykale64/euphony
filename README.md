@@ -1,6 +1,9 @@
 # Euphony
 
-![image info](https://img.shields.io/badge/python-3.6%2B-brightgreen)
+![py36](https://img.shields.io/badge/python-3.6%2B-brightgreen)
+![black](https://img.shields.io/badge/black--white)
+![pypi](https://img.shields.io/badge/pypi-v0.0.2-blue)
+![license](https://img.shields.io/badge/license-MIT-white)
 
 Python package to play music in background while your code runs.
 
