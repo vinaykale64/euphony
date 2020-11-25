@@ -9,7 +9,7 @@ class player:
 
     def __enter__(self):
         mixer.init()
-        mixer.music.load('music_files/sample.mp3')
+        mixer.music.load('euphony/music_files/sample.mp3')
         mixer.music.play()
 
     def __exit__(self, exc_type, exc_value, tb):
