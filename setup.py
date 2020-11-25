@@ -1,4 +1,4 @@
-"""Setup script for realpython-reader"""
+"""Setup script for euphony"""
 
 import os.path
 from setuptools import setup
@@ -12,12 +12,12 @@ with open(os.path.join(HERE, "README.md")) as fid:
 
 # This call to setup() does all the work
 setup(
-    name="rhythm",
+    name="euphony",
     version="0.0.1",
     description="Play music while your code runs",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/vinaykale64/rhythm",
+    url="https://github.com/vinaykale64/euphony",
     author="Vinay Dinkar Kale",
     author_email="vinaykale64@protonmail.com",
     license="MIT",
