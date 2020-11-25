@@ -12,12 +12,12 @@ with open(os.path.join(HERE, "README.md")) as fid:
 
 # This call to setup() does all the work
 setup(
-    name="acoustic",
+    name="rhythm",
     version="0.0.1",
     description="Play music while your code runs",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/vinaykale64/acoustic",
+    url="https://github.com/vinaykale64/rhythm",
     author="Vinay Dinkar Kale",
     author_email="vinaykale64@protonmail.com",
     license="MIT",
@@ -27,7 +27,7 @@ setup(
         "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 3",
     ],
-    packages=["acoustic"],
+    packages=["rhythm"],
     include_package_data=True,
     install_requires=[
         'pygame>=2.0.0'

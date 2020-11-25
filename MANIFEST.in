@@ -1,1 +1,1 @@
-include acoustic/music_files/*.mp3
+include rhythm/music_files/*.mp3
