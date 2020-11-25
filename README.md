@@ -1,5 +1,6 @@
 # Euphony
 
+![py27](https://img.shields.io/badge/python-2.7-brightgreen)
 ![py36](https://img.shields.io/badge/python-3.6%2B-brightgreen)
 ![black](https://img.shields.io/badge/black--white)
 ![pypi](https://img.shields.io/badge/pypi-v0.0.2-blue)
