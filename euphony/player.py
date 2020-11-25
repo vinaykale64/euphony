@@ -1,15 +1,16 @@
 import os
-os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
+
+os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
 from pygame import mixer
 
-class player:
 
+class player:
     def __init__(self):
         pass
 
     def __enter__(self):
         mixer.init()
-        mixer.music.load('euphony/music_files/sample.mp3')
+        mixer.music.load("euphony/music_files/sample.mp3")
         mixer.music.play()
 
     def __exit__(self, exc_type, exc_value, tb):
