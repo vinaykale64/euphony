@@ -23,8 +23,8 @@ or `mozart`. If not specified, it chooses at random.
 
 ``` python
 
-  from euphony import player
-  mozart = player.player(artist = 'mozart') # options: ['bach', 'beethoven']
+  from euphony import Player
+  mozart = Player.player(artist = 'mozart') # options: ['bach', 'beethoven']
 
   with mozart:
       for i in range(1000000000):

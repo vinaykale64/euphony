@@ -5,7 +5,7 @@ os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
 from pygame import mixer
 
 
-class player:
+class Player:
     """
     The player class creates an instance which can be used to play classical
     music while code runs in background. It's instance will be used as an
@@ -28,11 +28,11 @@ class player:
 
     .. code-block:: python
 
-        from euphony import player
-        random = player.player() # random music selector
-        bach = player.player(artist='bach') # for bach music
-        beethoven = player.player(artist='beethoven') # for beethoven music
-        mozart = player.player(artist='mozart') # for mozart music
+        from euphony import Player
+        random = Player.player() # random music selector
+        bach = Player.player(artist='bach') # for bach music
+        beethoven = Player.player(artist='beethoven') # for beethoven music
+        mozart = Player.player(artist='mozart') # for mozart music
 
         # Works for any of the above 4
         with mozart:

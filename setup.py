@@ -1,25 +1,40 @@
 """Setup script for euphony"""
 
+import re
 import os.path
 from setuptools import setup
+from pathlib import Path
 
-# The directory containing this file
-HERE = os.path.abspath(os.path.dirname(__file__))
+NAME = "euphony"
+HERE = Path(__file__).absolute().parent ## The directory containing this file
+META_PATH = Path("euphony") / "__init__.py"
+META_FILE = (HERE / META_PATH).read_text()
+INSTALL_REQUIRES = (HERE/"requirements.txt").read_text().split("\n")
+README = (
+    (HERE/"README.md").read_text()
+)
 
-# The text of the README file
-with open(os.path.join(HERE, "README.md")) as fid:
-    README = fid.read()
+def find_meta(meta):
+    """
+    Extract __*meta*__ from META_FILE
+    """
+    meta_match = re.search(
+        r"^__{meta}__ = ['\"]([^'\"]*)['\"]".format(meta=meta), META_FILE, re.M
+    )
+    if meta_match:
+        return meta_match.group(1)
+    raise RuntimeError("Unable to find __{meta}__ string.".format(meta=meta))
 
-# This call to setup() does all the work
+
 setup(
-    name="euphony",
-    version="0.0.5",
-    description="Play music while your code runs",
+    name=NAME,
+    version=find_meta("version"),
+    description=find_meta("description"),
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/vinaykale64/euphony",
-    author="Vinay Dinkar Kale",
-    author_email="vinaykale64@protonmail.com",
+    url=find_meta("url"),
+    author=find_meta("author"),
+    author_email=find_meta("email"),
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",
@@ -29,7 +44,5 @@ setup(
     ],
     packages=["euphony"],
     include_package_data=True,
-    install_requires=[
-        'pygame>=2.0.0'
-    ]
+    install_requires=INSTALL_REQUIRES
 )
