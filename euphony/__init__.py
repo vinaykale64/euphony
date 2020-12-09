@@ -1,7 +1,7 @@
 """
 Package Initialization
 """
-__version__ = "0.0.6"
+__version__ = "0.0.7"
 
 __title__ = "euphony"
 __description__ = "Play music while your code runs"
