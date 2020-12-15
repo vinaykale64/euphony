@@ -45,6 +45,12 @@ Euphony is pip-installable. Just run following cmd in terminal:
 
      pip install euphony
 
+
+Documentation
+-------------
+
+`Link to documentation <https://vinaykale64.github.io/euphony/build/html/includeme.html>`_
+
 .. |py27| image:: https://img.shields.io/badge/python-2.7-brightgreen
 .. |py36| image:: https://img.shields.io/badge/python-3.6%2B-brightgreen
 .. |black| image:: https://img.shields.io/badge/black--white
