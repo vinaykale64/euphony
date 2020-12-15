@@ -10,7 +10,7 @@ META_PATH = Path("euphony") / "__init__.py"
 META_FILE = (HERE / META_PATH).read_text()
 INSTALL_REQUIRES = (HERE/"requirements.txt").read_text().split("\n")
 README = (
-    (HERE/"README.md").read_text()
+    (HERE/"README.rst").read_text()
 )
 
 def find_meta(meta):
