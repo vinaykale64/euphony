@@ -19,12 +19,12 @@ or if it errors out, it stops so you can go back to it.
 
 Its pretty simple to use. Create a instance of the `player` class and let your code run enclosed 
 in a `with` statement with the object. You can choose between `bach`, `beethoven`
-or `mozart`. If not specified, it chooses at random. 
+or `mozart`. If not specified, it chooses artist randomly. 
 
 ``` python
 
-  from euphony import player
-  mozart = player.Player(artist = 'mozart') # options: ['bach', 'beethoven']
+  from euphony.player import Player
+  mozart = Player(artist = 'mozart') # options: ['bach', 'beethoven']
 
   with mozart:
       for i in range(1000000000):
@@ -33,6 +33,8 @@ or `mozart`. If not specified, it chooses at random.
 ```
 
 That's all ~!
+
+Note: Since it requires native audio output, you cannot use this when running code remotely like on AWS.
 
 ## Installation
 
