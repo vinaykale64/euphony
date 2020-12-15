@@ -1,7 +1,6 @@
 """Setup script for euphony"""
 
 import re
-import os.path
 from setuptools import setup
 from pathlib import Path
 

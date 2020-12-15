@@ -28,11 +28,11 @@ class Player:
 
     .. code-block:: python
 
-        from euphony import Player
-        random = Player.player() # random music selector
-        bach = Player.player(artist='bach') # for bach music
-        beethoven = Player.player(artist='beethoven') # for beethoven music
-        mozart = Player.player(artist='mozart') # for mozart music
+        from euphony.player import Player
+        artist = Player() # random music selector
+        bach = Player(artist='bach') # for bach music
+        beethoven = Player(artist='beethoven') # for beethoven music
+        mozart = Player(artist='mozart') # for mozart music
 
         # Works for any of the above 4
         with mozart:
@@ -53,14 +53,16 @@ class Player:
         if ".DS_Store" in templates:
             templates.remove(".DS_Store")
 
-        if self.artist == "beethoven":
+        if self.artist is None:
+            pass
+        elif self.artist == "beethoven":
             templates = [template for template in templates if "beethoven" in template]
         elif self.artist == "bach":
             templates = [template for template in templates if "bach" in template]
         elif self.artist == "mozart":
             templates = [template for template in templates if "mozart" in template]
         else:
-            pass
+            raise KeyError('Invalid artist specified. Choose among ["beethoven", "bach", "mozart"] or None')
 
         song = random.choice(templates)
         path = "music_templates/" + song
