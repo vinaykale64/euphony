@@ -1,8 +1,8 @@
 import os
-import random
-import pkg_resources
 os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
-from pygame import mixer
+import random  # noqa: E402
+import pkg_resources  # noqa: E402
+from pygame import mixer  # noqa: E402
 
 
 class Player:
@@ -15,8 +15,9 @@ class Player:
     ----------
 
     artist: str, Optional
-        Choose among 'bach', 'beethoven' and 'mozart' to play specific music. If
-        not specified, the code plays a random music file.
+        Choose among 'bach', 'beethoven' and 'mozart' to play
+        specific music. If not specified, the code plays a
+        random music file.
 
     Returns
     -------
@@ -56,13 +57,18 @@ class Player:
         if self.artist is None:
             pass
         elif self.artist == "beethoven":
-            templates = [template for template in templates if "beethoven" in template]
+            templates = [template for template in templates
+                         if "beethoven" in template]
         elif self.artist == "bach":
-            templates = [template for template in templates if "bach" in template]
+            templates = [template for template in templates
+                         if "bach" in template]
         elif self.artist == "mozart":
-            templates = [template for template in templates if "mozart" in template]
+            templates = [template for template in templates
+                         if "mozart" in template]
         else:
-            raise KeyError('Invalid artist specified. Choose among ["beethoven", "bach", "mozart"] or None')
+            raise KeyError('Invalid artist specified. Choose '
+                           'among ["beethoven", "bach", "mozart"] '
+                           'or None')
 
         song = random.choice(templates)
         path = "music_templates/" + song
@@ -72,7 +78,7 @@ class Player:
 
     def __exit__(self, exc_type, exc_value, tb):
         if exc_type is not None:
-            traceback.print_exception(exc_type, exc_value, tb)
+            traceback.print_exception(exc_type, exc_value, tb)   # noqa: F821
             # return False # uncomment to pass exception through
 
         mixer.music.stop()
