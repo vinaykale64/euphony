@@ -5,13 +5,14 @@ from setuptools import setup
 from pathlib import Path
 
 NAME = "euphony"
-HERE = Path(__file__).absolute().parent ## The directory containing this file
+HERE = Path(__file__).absolute().parent  # The directory containing this file
 META_PATH = Path("euphony") / "__init__.py"
 META_FILE = (HERE / META_PATH).read_text()
 INSTALL_REQUIRES = (HERE/"requirements.txt").read_text().split("\n")
 README = (
     (HERE/"README.md").read_text()
 )
+
 
 def find_meta(meta):
     """
