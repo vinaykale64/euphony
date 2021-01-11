@@ -4,6 +4,7 @@
 ![py36](https://img.shields.io/badge/python-3.6%2B-brightgreen)
 ![black](https://img.shields.io/badge/black--white)
 ![pypi](https://img.shields.io/badge/pypi-v0.0.9-blue)
+![flake8](https://img.shields.io/badge/flake8--blue)
 ![license](https://img.shields.io/badge/license-MIT-white)
 
 Have you ever got bored of running long chunks of code? 
